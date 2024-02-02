@@ -1,6 +1,9 @@
 # This is a basic workflow to help you get started with Actions
 name: Main workflow
 on: push
+env:
+  docker_username: ${{ github.actor }} 
+  docker_password: ${{ secrets.GITHUB_TOKEN }}
 jobs:
   Build:
     runs-on: ubuntu-latest
